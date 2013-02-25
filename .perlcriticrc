@@ -1,0 +1,36 @@
+
+[-CodeLayout::RequireTidyCode]
+
+[RegularExpressions::RequireExtendedFormatting]
+minimum_regex_length_to_complain_about = 25
+
+[ControlStructures::ProhibitDeepNests]
+max_nests = 5
+
+[ControlStructures::ProhibitCascadingIfElse]
+max_elsif = 5
+
+[NamingConventions::Capitalization]
+
+[InputOutput::RequireCheckedSyscalls]
+exclude_functions = print say
+functions = :defaults opendir readdir closedir
+
+[-RegularExpressions::RequireLineBoundaryMatching]
+
+[-Documentation::RequirePodAtEnd]
+
+
+[-ValuesAndExpressions::ProhibitMagicNumbers]
+
+[-Variables::ProhibitPunctuationVars]
+
+[-ValuesAndExpressions::ProhibitConstantPragma]
+
+[-CodeLayout::ProhibitParensWithBuiltins]
+
+[-RegularExpressions::ProhibitEscapedMetacharacters]
+
+[-Miscellanea::RequireRcsKeywords]
+
+[-ControlStructures::ProhibitPostfixControls]

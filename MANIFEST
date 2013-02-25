@@ -1,0 +1,6 @@
+/Makefile.PL
+/MANIFEST
+/MANIFEST.SKIP
+/lib/HTML/Meta/Robots.pm
+/t/001_base.t
+/t/002_simple.t
