@@ -9,7 +9,7 @@ package HTML::Meta::Robots;
 use strict;
 use warnings FATAL => 'all';
 use utf8;
-use version 0.77; our $VERSION = version->new('v0.1_1');
+use version 0.77; our $VERSION = version->new('v0.2');
 
 ############################################################################
 # Register accessor methods.
