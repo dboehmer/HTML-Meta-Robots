@@ -63,6 +63,9 @@ local.properties
 .externalToolBuilders/
 *.launch
 
+## Dist-Zilla.gitignore
+/HTML-Meta-Robots-*
+
 ## Allow some special dot files
 !.git*
 !.perlcriticrc

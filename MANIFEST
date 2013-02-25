@@ -1,6 +1,0 @@
-Makefile.PL
-MANIFEST
-MANIFEST.SKIP
-lib/HTML/Meta/Robots.pm
-t/001-base.t
-t/002-simple.t
