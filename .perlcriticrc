@@ -18,9 +18,6 @@ functions = :defaults opendir readdir closedir
 
 [-RegularExpressions::RequireLineBoundaryMatching]
 
-[-Documentation::RequirePodAtEnd]
-
-
 [-ValuesAndExpressions::ProhibitMagicNumbers]
 
 [-Variables::ProhibitPunctuationVars]
@@ -34,3 +31,7 @@ functions = :defaults opendir readdir closedir
 [-Miscellanea::RequireRcsKeywords]
 
 [-ControlStructures::ProhibitPostfixControls]
+
+[Documentation::RequirePodSections]
+script_sections = NAME | USAGE | DESCRIPTION | ARGUMENTS | FUNCTIONS | EXIT STATUS | BUGS AND LIMITATIONS | AUTHOR | LICENSE AND COPYRIGHT
+lib_sections = NAME | VERSION | SYNOPSIS | DESCRIPTION | METHODS | BUGS AND LIMITATIONS | AUTHOR | LICENSE AND COPYRIGHT
