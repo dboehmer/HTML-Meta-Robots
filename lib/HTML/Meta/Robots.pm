@@ -34,7 +34,9 @@ BEGIN {
   # Register index accessor which also sets simple accessors.
   *{'HTML::Meta::Robots::index'} = sub {
     my ( $self, @params ) = @_;
-    $self->_accessor( $_, @params ) for @simple_accessors;
+    if ( scalar @params ) {
+      $self->_accessor( $_, @params ) for @simple_accessors;
+    }
     $self->_accessor( 'index', @params );
   };
 
@@ -56,9 +58,16 @@ BEGIN {
 sub new {
   my ( $class, %params ) = @_;
   my $self = bless {}, $class;
+
+  # Setup property order.
   $self->{order} = [qw( index follow archive odp ydir snippet )];
+
+  # Allow all properties by default.
   $self->{props}->{$_} = 1 for @{ $self->{order} };
-  $self->$_( $params{$_} ) for grep { exists $params{$_} } keys %params;
+
+  # Set properties configured by init parameters.
+  $self->$_( $params{$_} ) for grep { exists $self->{props}->{$_} } keys %params;
+
   return $self;
 }
 
@@ -66,7 +75,7 @@ sub new {
 # INTERNAL - Simple getter/setter for internal fields.
 sub _accessor {
   my ( $self, $field, @params ) = @_;
-  if ( $#params >= 0 ) {
+  if ( scalar @params ) {
     $self->{props}->{$field} = $params[0] ? 1 : 0;
     return $self;
   }
