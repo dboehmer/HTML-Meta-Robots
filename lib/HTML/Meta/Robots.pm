@@ -333,17 +333,8 @@ L<BURNERSK|https://metacpan.org/author/BURNERSK> E<lt>L<burnersk@cpan.org|mailto
 
 But there are more people who have contributed to HTML::Meta::Robots:
 
-=over
-
-=item *
-
-L<HORNBURG|https://metacpan.org/author/HORNBURG> E<lt>L<hornburg@cpan.org|mailto:hornburg@cpan.org>E<gt>
-
-=item *
-
-L<MITHALDU|https://metacpan.org/author/MITHALDU> E<lt>L<mithaldu@cpan.org|mailto:mithaldu@cpan.org>E<gt>
-
-=back
+L<HORNBURG|https://metacpan.org/author/HORNBURG>,
+L<MITHALDU|https://metacpan.org/author/MITHALDU>
 
 =head1 LICENSE AND COPYRIGHT
 
