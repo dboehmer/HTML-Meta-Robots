@@ -339,6 +339,10 @@ But there are more people who have contributed to HTML::Meta::Robots:
 
 L<HORNBURG|https://metacpan.org/author/HORNBURG> E<lt>L<hornburg@cpan.org|mailto:hornburg@cpan.org>E<gt>
 
+=item *
+
+L<MITHALDU|https://metacpan.org/author/MITHALDU> E<lt>L<mithaldu@cpan.org|mailto:mithaldu@cpan.org>E<gt>
+
 =back
 
 =head1 LICENSE AND COPYRIGHT

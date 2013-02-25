@@ -14,6 +14,11 @@ AUTHOR
 
 * BURNERSK <burnersk@cpan.org>
 
+But there are more people who have contributed to HTML::Meta::Robots:
+
+* HORNBURG <hornburg@cpan.org>
+* MITHALDU <mithaldu@cpan.org>
+
 LICENSE AND COPYRIGHT
 ---------------------
 
