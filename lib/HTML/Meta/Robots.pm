@@ -9,7 +9,7 @@ package HTML::Meta::Robots;
 use strict;
 use warnings FATAL => 'all';
 use utf8;
-use version 0.77; our $VERSION = version->new('v0.1');
+use version 0.77; our $VERSION = version->new('v0.1_1');
 
 ############################################################################
 # Class constructor.
@@ -164,22 +164,22 @@ Allows or denies any search engine to index the page.
 
 Allows or denies any search engine to follow links on the page.
 
-=item archive
+=item (no)archive
 
 Allows or denies the L<Internet Archive|http://www.archive.org/> to cache
 the page.
 
-=item odp
+=item (no)odp
 
 Allows or denies the L<Open Directory Project|http://www.dmoz.org/> search
 engine to index the page.
 
-=item ydir
+=item (no)ydir
 
 Allows or denies the L<Yahoo|http://www.yahoo.com/> search engine to index
 the page.
 
-=item snippet
+=item (no)snippet
 
 Allows or denies the L<Google|http://www.google.com/> search engine to
 display an abstract of the page and at the same time to cache the page.
@@ -189,7 +189,7 @@ display an abstract of the page and at the same time to cache the page.
 =head2 Why don't use Moo(se)?
 
 Yes, I could reduce a lot of the code by using Moo(se). However I decided to
-not use Moo(se) because of my own experience in "more strict" corporation.
+not use Moo(se) because of my own experience with "more strict" corporation.
 The problem is that some corporation have to review the code they use for
 security reasons including all dependencies. Some handlers require this in
 order to handle corporation data such as credit cards (PCI-DSS). Doing a
@@ -336,7 +336,19 @@ L<GitHub Issue|https://github.com/burnersk/HTML-Meta-Robots/issues>, please.
 
 =over
 
-=item BURNERSK E<lt>L<burnersk@cpan.org|mailto:burnersk@cpan.org>E<gt>
+=item *
+
+L<BURNERSK|https://metacpan.org/author/BURNERSK> E<lt>L<burnersk@cpan.org|mailto:burnersk@cpan.org>E<gt>
+
+=back
+
+But there are more people who have contributed to HTML::Meta::Robots:
+
+=over
+
+=item *
+
+L<HORNBURG|https://metacpan.org/author/HORNBURG> E<lt>L<hornburg@cpan.org|mailto:hornburg@cpan.org>E<gt>
 
 =back
 
