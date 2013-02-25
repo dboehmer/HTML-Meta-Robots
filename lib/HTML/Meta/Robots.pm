@@ -126,13 +126,13 @@ v0.1
     # Do not "allow" creation of google snippets and indexing by the Yahoo crawler.
     my $robots = HTML::Meta::Robots->new;
     $robots->snippet(0);
-    $robots->yahoo(0);
+    $robots->ydir(0);
     # on as one-liner:
-    $robots->snippet(0)->yahoo(0);
+    $robots->snippet(0)->ydir(0);
     
     # What is the indexing state of the Open Directory Project?
     my $robots = HTML::Meta::Robots->new;
-    printf "It's %s\n", $robots->open_directory_project ? 'allowed' : 'denied';
+    printf "It's %s\n", $robots->odp ? 'allowed' : 'denied';
 
 =head1 DESCRIPTION
 
@@ -209,13 +209,13 @@ See L</"follow"> for details.
 
 See L</"archive"> for details.
 
-=item open_directory_project => (1|0)
+=item odp => (1|0)
 
-See L</"open_directory_project"> for details.
+See L</"odp"> for details.
 
-=item yahoo => (1|0)
+=item ydir => (1|0)
 
-See L</"yahoo"> for details.
+See L</"ydir"> for details.
 
 =item snippet => (1|0)
 
@@ -265,31 +265,31 @@ Get or set the archive state. For example:
     # Set follow state to deny:
     $robots->archive(0);
 
-=head2 open_directory_project
+=head2 odp
 
-Get or set the open_directory_project state. For example:
+Get or set the Open Directory Project state. For example:
 
     # Retrieve archive state:
-    my $state = $robots->open_directory_project;
+    my $state = $robots->odp;
     
     # Set open_directory_project state to allow:
-    $robots->open_directory_project(1);
+    $robots->odp(1);
     
     # Set open_directory_project state to deny:
-    $robots->open_directory_project(0);
+    $robots->odp(0);
 
-=head2 yahoo
+=head2 ydir
 
-Get or set the yahoo state. For example:
+Get or set the Yahoo state. For example:
 
     # Retrieve yahoo state:
-    my $state = $robots->yahoo;
+    my $state = $robots->ydir;
     
     # Set yahoo state to allow:
-    $robots->yahoo(1);
+    $robots->ydir(1);
     
     # Set yahoo state to deny:
-    $robots->yahoo(0);
+    $robots->ydir(0);
 
 =head2 snippet
 
