@@ -28,8 +28,6 @@ functions = :defaults opendir readdir closedir
 
 [-RegularExpressions::ProhibitEscapedMetacharacters]
 
-[-Miscellanea::RequireRcsKeywords]
-
 [-ControlStructures::ProhibitPostfixControls]
 
 [Documentation::RequirePodSections]
