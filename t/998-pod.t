@@ -11,15 +11,11 @@ use warnings FATAL => 'all';
 use utf8;
 
 ############################################################################
-# Get use of modules.
 use Test::More;
-eval 'use Test::Pod 1.00';
-if ($@) {
-  plan( skip_all => 'Test::Pod 1.00 required for testing POD' );
-}
+plan skip_all => "Release tests are not enabled" if !$ENV{RELEASE_TESTING};
 
 ############################################################################
-all_pod_files_ok( all_pod_files('lib') );
-
-############################################################################
-1;
+eval "use Test::Pod 1.00";
+plan skip_all => "Test::Pod 1.00 required for testing POD" if $@;
+all_pod_files_ok();
+done_testing();
