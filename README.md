@@ -3,6 +3,8 @@ HTML::Meta::Robots
 
 HTML::Meta::Robots - A simple HTML meta tag "robots" generator.
 
+* [Continues Integration](http://ci.dev5media.de/job/HTML-Meta-Robots/)
+
 BUGS AND LIMITATIONS
 --------------------
 
