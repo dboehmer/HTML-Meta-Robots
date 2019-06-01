@@ -12,7 +12,7 @@ use utf8;
 
 ############################################################################
 # Get use of modules.
-use Test::More tests => 18;
+use Test::More tests => 20;
 use Test::NoWarnings;
 use HTML::Meta::Robots;
 
@@ -28,6 +28,17 @@ use HTML::Meta::Robots;
     $robots->content,
     'index,follow,archive,odp,ydir,snippet',
     'Default robots content'
+  );
+  subtest 'HTTP header hash elements' => sub {
+    my @hash = $robots->http_header_list;
+    is @hash => 2, "2 elements";
+    is $hash[0] => 'X-Robots-Tag', "key";
+    is $hash[1] => 'index,follow,archive,odp,ydir,snippet', "value";
+  };
+  is(
+    $robots->http_header_line,
+    "X-Robots-Tag: index,follow,archive,odp,ydir,snippet\n",
+    'HTTP header line'
   );
   is(
     $robots->meta,

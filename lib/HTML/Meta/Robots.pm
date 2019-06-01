@@ -90,6 +90,20 @@ sub content {
 }
 
 ############################################################################
+# Return key and value for robots HTTP header as list.
+sub http_header_list {
+  my ($self) = @_;
+  return ( 'X-Robots-Tag' => $self->content );
+}
+
+############################################################################
+# Return robots HTTP header line.
+sub http_header_line {
+  my ($self) = @_;
+  return sprintf "X-Robots-Tag: %s\n", $self->content;
+}
+
+############################################################################
 # Return robots meta tag.
 sub meta {
   my ( $self, $no_xhtml ) = @_;
@@ -337,6 +351,19 @@ Get or set the snippet state. For example:
 Returns the content part of an HTML robots meta tag. For example:
 
     printf '<html><head><meta name="robots" content="%s"/></head></html>', $robots->content;
+
+=head2 http_header_list
+
+Returns a key/value list with 1 pair for the HTTP header C<X-Robots-Tag>.
+This is useful in a web framework like L<Dancer2>:
+
+    response_header( $robots->http_header_list );
+
+=head2 http_header_line
+
+Returns a string for the HTTP header C<X-Robots-Tag> including the trailing linebreak.
+
+    print $robots->http_header_line;
 
 =head2 meta
 
